@@ -23,40 +23,99 @@
       </template>
     </el-autocomplete>
     <div :id="'map' + keyData" style="height: 300px; width: 800px"></div>
-  </div>
-  <el-dialog v-model="dialogVisible" title="下载二维码" width="50%">
-    <div>
-      <qrcode-vue
-        v-if="qrCodeUrl"
-        :value="qrCodeUrl"
-        :size="300"
-        level="H"
-        id="codeLabel"
-      />
+    <el-button type="primary" @click="handleDownload"> 下载坦克 </el-button>
+    <el-button type="primary" @click="getDate"> 获取数据 </el-button>
+    <div v-for="(item, index) in inputs" :key="item.id">
+      <About
+        :keyData="item.refItmem"
+        :ref="
+          (el) => {
+            inputRefs[index] = el;
+          }
+        "
+      ></About>
+      <span @click="deleteItem(index)">删除</span>
     </div>
-    <template #footer>
-      <span class="dialog-footer">
-        <el-button type="primary" @click="handleDownloadQrCode">
-          下载
-        </el-button>
-        <!-- <el-button @click="dialogVisible = false">取消</el-button>
+    <el-dialog v-model="dialogVisible" title="下载二维码" width="50%">
+      <div>
+        <qrcode-vue
+          v-if="qrCodeUrl"
+          :value="qrCodeUrl"
+          :size="300"
+          level="H"
+          id="codeLabel"
+        />
+      </div>
+      <template #footer>
+        <span class="dialog-footer">
+          <el-button type="primary" @click="handleDownloadQrCode">
+            下载
+          </el-button>
+          <!-- <el-button @click="dialogVisible = false">取消</el-button>
             <el-button type="primary" @click="dialogVisible = false">
               确定
             </el-button> -->
-      </span>
-    </template>
-  </el-dialog>
-  <el-button type="primary" @click="handleDownload"> 下载坦克 </el-button>
+        </span>
+      </template>
+    </el-dialog>
+  </div>
 </template>
 <script setup>
 import { ref, onMounted, defineProps } from "vue";
 import QrcodeVue from "qrcode.vue";
+import About from "./about.vue";
+
+const inputs = ref([
+  {
+    id: 1,
+    refItmem: {
+      input1: "",
+      input: "",
+    },
+  },
+  {
+    id: 2,
+    refItmem: {
+      input1: "",
+      input: "",
+    },
+  },
+  {
+    id: 3,
+    refItmem: {
+      input1: "",
+      input: "",
+    },
+  },
+]);
+const inputRefs = ref([]);
+
+// 设置ref的函数，将创建的ref添加到inputRefs数组
+const setInputRef = (el, index) => {
+  if (el) {
+    inputRefs.value[index] = el;
+  }
+};
+
+const deleteItem = (index) => {
+  inputs.value.splice(index, 1);
+  // inputRefs.value.splice(index, 1);
+  console.log(inputs.value, index, "数据数组");
+  console.log(inputRefs.value, index, "ref数组");
+};
+
+const getDate = () => {
+  const arr = inputRefs.value.map((item) => {
+    return item.getInpuVal();
+  });
+  console.log(arr);
+};
 
 const props = defineProps({
   keyData: Number,
 });
 const qrCodeUrl = ref("");
-const dialogVisible = ref(true);
+const dialogVisible = ref(false);
 const mapData = ref({
   address: "", //详细地址
   point: "", //经纬度
@@ -114,13 +173,14 @@ function handleSelect(item) {
 }
 
 const handleDownload = (row) => {
-  console.log("row===", row);
-  // qrCodeUrl.vale = `https://sign-dev.iqiyi.com?id=`;
-  console.log("qrCodeUrl.vale===", qrCodeUrl.vale);
-  dialogVisible.value = true;
-  setTimeout(() => {
-    qrCodeUrl.value = `http://www.baidu.com`;
-  }, 1000);
+  console.log(inputRefs.value, "ref数组");
+  // console.log("row===", row);
+  // // qrCodeUrl.vale = `https://sign-dev.iqiyi.com?id=`;
+  // console.log("qrCodeUrl.vale===", qrCodeUrl.vale);
+  // dialogVisible.value = true;
+  // setTimeout(() => {
+  //   qrCodeUrl.value = `http://www.baidu.com`;
+  // }, 1000);
 };
 // 下载二维码
 const handleDownloadQrCode = () => {
