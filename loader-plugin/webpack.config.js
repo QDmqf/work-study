@@ -1,4 +1,5 @@
 const path = require("path");
+const GitMatePlugin = require("./my-plugin/index.js");
 
 module.exports = {
   entry: "./src/index.js",
@@ -34,4 +35,5 @@ module.exports = {
       },
     ],
   },
+  plugins: [new GitMatePlugin()],
 };
