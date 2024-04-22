@@ -1,0 +1,50 @@
+@bg-color: #b7d4a8;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.wrapper {
+  position: relative;
+  height: 420px;
+  width: 360px;
+  background-color: @bg-color;
+  border: 10px #000 solid;
+  border-radius: 8px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  .action-wrapper {
+    width: 300px;
+    height: 300px;
+    border: 3px #000 solid;
+  }
+  .score-wrapper {
+  }
+  .snick {
+    > div {
+      width: 10px;
+      height: 10px;
+      background: #000;
+      border: 1px solid @bg-color;
+      position: absolute;
+    }
+  }
+  .food {
+    width: 10px;
+    height: 10px;
+    background: #000;
+    border: 1px solid @bg-color;
+    position: absolute;
+    left: 100px;
+    top: 120px;
+  }
+}

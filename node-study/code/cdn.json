@@ -1,0 +1,124 @@
+{
+  "byteluck-theme": {
+    "folderPath": "/lib/byteluck-theme/0.1.13.beta-1",
+    "js": [],
+    "css": []
+  },
+  "ok-i18n": {
+    "folderPath": "/lib/ok-i18n/2.2.0",
+    "js": ["/asyncImportI18n/index.min.js"],
+    "css": []
+  },
+  "browser-probing": {
+    "folderPath": "/lib/%40byteluck/browser-probing/0.0.6",
+    "js": ["/index.js"],
+    "css": []
+  },
+  "decimal": {
+    "folderPath": "/libs/decimal.js/10.3.1",
+    "js": ["/decimal.min.js"],
+    "css": []
+  },
+  "ok-wc-ui": {
+    "folderPath": "/lib/ok-wc-ui/3.5.29",
+    "js": ["/dist/ok-wc-ui.umd.js"],
+    "css": ["/dist/style.css"]
+  },
+  "ego-fe-widgets": {
+    "folderPath": "/lib/%40byteluck/ego-fe-widgets/2.5.3",
+    "js": [
+      "/dist/webComponents/js/app.js",
+      "/dist/webComponents/js/0.js",
+      "/dist/webComponents/js/chunk-vendors.js"
+    ],
+    "css": [
+      "/dist/webComponents/css/index.css",
+      "/dist/webComponents/css/chunk-vendors.css"
+    ]
+  },
+  "approval-wc-widgets-desktop": {
+    "folderPath": "/lib/%40byteluck/approval-wc-widgets-desktop/2.0.73",
+    "js": ["/dist/js/index.js", "/dist/js/chunk-vendors.js"],
+    "css": ["/dist/css/index.css"]
+  },
+  "tinymce": {
+    "folderPath": "/libs/tinymce-5.8.0",
+    "js": ["/tinymce.min.js"]
+  },
+  "ag-grid": {
+    "folderPath": "/libs/ag-grid-28.2.1",
+    "js": ["/ag-grid-community.min.js"],
+    "css": ["/ag-grid.min.css", "/ag-theme-alpine.min.css"]
+  },
+
+  "ok-wc-mui": {
+    "folderPath": "/lib/ok-wc-mui/3.5.13",
+    "js": ["/dist/ok-wc-mui.umd.js"],
+    "css": ["/dist/style.css"]
+  },
+  "ego-fe-widgets-wap": {
+    "folderPath": "/lib/%40byteluck/ego-fe-widgets-wap/2.16.19",
+    "js": [
+      "/dist/webComponents/js/app.js",
+      "/dist/webComponents/js/chunk-vendors.js"
+    ],
+    "css": [
+      "/dist/webComponents/css/index.css",
+      "/dist/webComponents/css/chunk-vendors.css"
+    ]
+  },
+  "approval-wc-widgets-mobile": {
+    "folderPath": "/lib/%40byteluck/approval-wc-widgets-mobile/1.0.4",
+    "js": ["/dist/%40byteluck/approval-wc-widgets-mobile.umd.js"],
+    "css": ["/dist/style.css"]
+  },
+  "vant": {
+    "folderPath": "/libs/vant-3.6.10",
+    "js": ["/vant.min.js"],
+    "css": ["/index.css"]
+  },
+  "vant-approval": {
+    "folderPath": "/lib/vant%404.0.0-beta.1",
+    "js": [],
+    "css": ["/index.css"]
+  },
+  "lodash": {
+    "folderPath": "/libs/lodash-4.17.21",
+    "js": ["/lodash.min.js"]
+  },
+  "vue": {
+    "folderPath": "/libs/vue-3.2.47",
+    "js": ["/vue.global.prod.js"],
+    "css": []
+  },
+  "moment": {
+    "folderPath": "/libs/moment-2.27.0",
+    "js": ["/min/moment-with-locales.min.js"],
+    "css": []
+  },
+  "antdv": {
+    "folderPath": "/libs/antdv-2.2.8",
+    "js": ["/antd.min.js"],
+    "css": []
+  },
+  "byteluck-theme-antdv3": {
+    "folderPath": "/lib/byteluck-theme-antdv3/1.0.1",
+    "js": [],
+    "css": []
+  },
+  "byteluck-controls": {
+    "folderPath": "/lib/byteluck-controls/4.1.0",
+    "js": [],
+    "css": []
+  },
+  "lowcode-fonts": {
+    "folderPath": "/iconfonts/lowcode-fonts",
+    "js": ["/iconfont.js"],
+    "css": ["/iconfont.css"]
+  },
+  "sdafsdfasdf": {
+    "folderPath": "sdfasfds粉色的发放阿道夫",
+    "js": ["/iconfont.js"],
+    "css": ["/iconfont.css"]
+  }
+}
