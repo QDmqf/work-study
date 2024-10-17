@@ -7,7 +7,7 @@ class GitMatePlugin {
   apply(compiler) {
     // 异步串行
     compiler.hooks.emit.tapAsync("GitMatePlugin", (compilation, callback) => {
-      console.log(this.config.plugin["html"]);
+      // console.log(this.config.plugin["html"]);
       debugger;
       // 获取资源文件，过滤js，html，css文件
       // 遍历文件，添加内容
